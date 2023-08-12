@@ -13,9 +13,15 @@ const images = [
   },
 ];
 
-const galleryList = document.querySelector("#gallery");
-galleryList.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
-// galleryList.insertAdjacentHTML(
-//   "afterbegin",
-//   "<h2>coś</h2>"`<img src="${images.url}" alt="${images.alt}"></img>`
-// );
+const galleryList = document.querySelector(`.gallery`);
+
+images.forEach((image) => {
+  galleryList.insertAdjacentHTML(
+    "afterbegin",
+    `<li><img class="img" src="${image.url}" alt="${image.alt}"></img></li>`
+  );
+});
+galleryList.style.display = "flex";
+galleryList.style.flexDirection = "column";
+galleryList.style.gap = "20px";
+galleryList.style.overflow = "hidden";
