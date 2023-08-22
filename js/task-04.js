@@ -1,6 +1,10 @@
-const decrementBtn = document.querySelector("#counter").firstElementChild;
-const incrementBtn = document.querySelector("#counter").lastElementChild;
-const currentValue = decrementBtn.nextElementSibling;
+const decrementBtn = document.querySelector(
+  `#counter button[data-action="decrement"]`
+);
+const incrementBtn = document.querySelector(
+  `#counter button[data-action="increment"]`
+);
+const currentValue = document.querySelector("#value");
 
 let counterValue = 0;
 const increment = () => {

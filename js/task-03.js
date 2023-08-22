@@ -21,7 +21,3 @@ images.forEach((image) => {
     `<li><img class="img" src="${image.url}" alt="${image.alt}"></img></li>`
   );
 });
-galleryList.style.display = "flex";
-galleryList.style.flexDirection = "column";
-galleryList.style.gap = "20px";
-galleryList.style.overflow = "hidden";
